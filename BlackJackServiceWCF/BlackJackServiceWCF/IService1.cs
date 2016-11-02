@@ -7,14 +7,32 @@ using System.Text;
 
 namespace BlackJackServiceWCF
 {
-    [ServiceContract(InstanceContextMode = InstanceContextMode.Single)]
+    [ServiceContract (CallbackContract = typeof(IMyCallback))]
     public interface IGame
     {
         [OperationContract]
-        int Connect(string playerName, int playerId);
+        int Connect(string playerName);
+
+        [OperationContract]
+        Card GiveCard(int playerId);
+
+        [OperationContract]
+        void Pass(int playerId);
+
+        [OperationContract]
+        void Ready(int playerId);
+
+        [OperationContract]
+        void Exit(int playerId);
+    }
+
+    public interface IMyCallback
+    {
+        [OperationContract]
+        void ShowCard(Card card, int playerId);
 
         //[OperationContract]
-        //Card GiveCard();
+        //void ShowCard();
     }
 
 

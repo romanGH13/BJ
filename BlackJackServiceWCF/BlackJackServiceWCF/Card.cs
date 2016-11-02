@@ -25,12 +25,7 @@ namespace BlackJackServiceWCF
         public Suit Suit { set; get; }
         public int Value { set; get; }
 
-        //public Card()
-        //{
-        //    Title = "123";
-        //    Suit = Suit.CLUBS;
-        //    Value = 0;
-        //}
+
         public Card(string title, Suit suit)
         {
             this.Title = title;

@@ -13,14 +13,15 @@ namespace BlackJackServiceWCF
         public string Name { set; get; }
         public int points = 0;
         public bool isReady { set; get; }
+        public bool isPass { set; get; }
 
-
-        public Player(int id, string name)
+        public Player(string name)
         {
-            this.Id = id;
+            this.Id = 0;
             this.Name = name;
             Cards = new List<Card>();
             this.isReady = false;
+            this.isPass = false;
         }
 
     }
