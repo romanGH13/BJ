@@ -30,5 +30,20 @@ namespace BlackJackClient
         {
            
         }
+
+        private void btReady_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btOneMore_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btPass_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

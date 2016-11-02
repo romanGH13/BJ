@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CallbackHandler.cs" />
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +102,7 @@
     <None Include="Service References\ServiceReference1\BlackJackClient.ServiceReference1.Card.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference1\Game.wsdl" />
     <None Include="Service References\ServiceReference1\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -110,7 +112,6 @@
     <None Include="Service References\ServiceReference1\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\MyGame.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

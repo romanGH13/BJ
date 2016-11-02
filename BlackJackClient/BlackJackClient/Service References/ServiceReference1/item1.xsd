@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BlackJackService" />
-  <xs:element name="EnterGame">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BlackJackServiceWCF/Game/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BlackJackServiceWCF" />
+  <xs:element name="Connect">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="playerName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="EnterGameResponse">
+  <xs:element name="ConnectResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConnectResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ExitGame">
+  <xs:element name="GiveCard">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="playerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ExitGameResponse">
+  <xs:element name="GiveCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BlackJackServiceWCF" minOccurs="0" name="GiveCardResult" nillable="true" type="q1:Card" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="playerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PassResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -37,36 +53,23 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Pass">
+  <xs:element name="Exit">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="playerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="PassResponse">
+  <xs:element name="ExitResponse">
     <xs:complexType>
       <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GiveCard">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="playerId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GiveCardResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BlackJackService" minOccurs="0" name="GiveCardResult" nillable="true" type="q1:Card" />
-      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ShowCard">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BlackJackService" minOccurs="0" name="card" nillable="true" type="q2:Card" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BlackJackServiceWCF" minOccurs="0" name="card" nillable="true" type="q2:Card" />
+        <xs:element minOccurs="0" name="playerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

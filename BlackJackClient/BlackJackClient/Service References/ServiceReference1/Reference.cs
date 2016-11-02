@@ -15,21 +15,12 @@ namespace BlackJackClient.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Card", Namespace="http://schemas.datacontract.org/2004/07/BlackJackService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Card", Namespace="http://schemas.datacontract.org/2004/07/BlackJackServiceWCF")]
     [System.SerializableAttribute()]
     public partial class Card : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private BlackJackClient.ServiceReference1.Suit SuitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ValueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -38,45 +29,6 @@ namespace BlackJackClient.ServiceReference1 {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public BlackJackClient.ServiceReference1.Suit Suit {
-            get {
-                return this.SuitField;
-            }
-            set {
-                if ((this.SuitField.Equals(value) != true)) {
-                    this.SuitField = value;
-                    this.RaisePropertyChanged("Suit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Title {
-            get {
-                return this.TitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
-                    this.TitleField = value;
-                    this.RaisePropertyChanged("Title");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
             }
         }
         
@@ -90,115 +42,90 @@ namespace BlackJackClient.ServiceReference1 {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Suit", Namespace="http://schemas.datacontract.org/2004/07/BlackJackService")]
-    public enum Suit : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SPADES = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CLUBS = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        DIAMONDS = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        HEARTS = 3,
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IMyGame", CallbackContract=typeof(BlackJackClient.ServiceReference1.IMyGameCallback))]
-    public interface IMyGame {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IGame", CallbackContract=typeof(BlackJackClient.ServiceReference1.IGameCallback))]
+    public interface IGame {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/EnterGame", ReplyAction="http://tempuri.org/IMyGame/EnterGameResponse")]
-        void EnterGame(string name);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Connect", ReplyAction="http://tempuri.org/IGame/ConnectResponse")]
+        int Connect(string playerName);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/EnterGame", ReplyAction="http://tempuri.org/IMyGame/EnterGameResponse")]
-        System.Threading.Tasks.Task EnterGameAsync(string name);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Connect", ReplyAction="http://tempuri.org/IGame/ConnectResponse")]
+        System.Threading.Tasks.Task<int> ConnectAsync(string playerName);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/ExitGame", ReplyAction="http://tempuri.org/IMyGame/ExitGameResponse")]
-        void ExitGame(int playerId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/ExitGame", ReplyAction="http://tempuri.org/IMyGame/ExitGameResponse")]
-        System.Threading.Tasks.Task ExitGameAsync(int playerId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/Ready", ReplyAction="http://tempuri.org/IMyGame/ReadyResponse")]
-        void Ready(int playerId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/Ready", ReplyAction="http://tempuri.org/IMyGame/ReadyResponse")]
-        System.Threading.Tasks.Task ReadyAsync(int playerId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/Pass", ReplyAction="http://tempuri.org/IMyGame/PassResponse")]
-        void Pass(int playerId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/Pass", ReplyAction="http://tempuri.org/IMyGame/PassResponse")]
-        System.Threading.Tasks.Task PassAsync(int playerId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/GiveCard", ReplyAction="http://tempuri.org/IMyGame/GiveCardResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/GiveCard", ReplyAction="http://tempuri.org/IGame/GiveCardResponse")]
         BlackJackClient.ServiceReference1.Card GiveCard(int playerId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/GiveCard", ReplyAction="http://tempuri.org/IMyGame/GiveCardResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/GiveCard", ReplyAction="http://tempuri.org/IGame/GiveCardResponse")]
         System.Threading.Tasks.Task<BlackJackClient.ServiceReference1.Card> GiveCardAsync(int playerId);
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMyGameCallback {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyGame/ShowCard", ReplyAction="http://tempuri.org/IMyGame/ShowCardResponse")]
-        void ShowCard(BlackJackClient.ServiceReference1.Card card);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Pass", ReplyAction="http://tempuri.org/IGame/PassResponse")]
+        void Pass(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Pass", ReplyAction="http://tempuri.org/IGame/PassResponse")]
+        System.Threading.Tasks.Task PassAsync(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Ready", ReplyAction="http://tempuri.org/IGame/ReadyResponse")]
+        void Ready(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Ready", ReplyAction="http://tempuri.org/IGame/ReadyResponse")]
+        System.Threading.Tasks.Task ReadyAsync(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Exit", ReplyAction="http://tempuri.org/IGame/ExitResponse")]
+        void Exit(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/Exit", ReplyAction="http://tempuri.org/IGame/ExitResponse")]
+        System.Threading.Tasks.Task ExitAsync(int playerId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMyGameChannel : BlackJackClient.ServiceReference1.IMyGame, System.ServiceModel.IClientChannel {
+    public interface IGameCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGame/ShowCard", ReplyAction="http://tempuri.org/IGame/ShowCardResponse")]
+        void ShowCard(BlackJackClient.ServiceReference1.Card card, int playerId);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IGameChannel : BlackJackClient.ServiceReference1.IGame, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MyGameClient : System.ServiceModel.DuplexClientBase<BlackJackClient.ServiceReference1.IMyGame>, BlackJackClient.ServiceReference1.IMyGame {
+    public partial class GameClient : System.ServiceModel.DuplexClientBase<BlackJackClient.ServiceReference1.IGame>, BlackJackClient.ServiceReference1.IGame {
         
-        public MyGameClient(System.ServiceModel.InstanceContext callbackInstance) : 
+        public GameClient(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {
         }
         
-        public MyGameClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+        public GameClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
                 base(callbackInstance, endpointConfigurationName) {
         }
         
-        public MyGameClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+        public GameClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public MyGameClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public GameClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public MyGameClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public GameClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public void EnterGame(string name) {
-            base.Channel.EnterGame(name);
+        public int Connect(string playerName) {
+            return base.Channel.Connect(playerName);
         }
         
-        public System.Threading.Tasks.Task EnterGameAsync(string name) {
-            return base.Channel.EnterGameAsync(name);
+        public System.Threading.Tasks.Task<int> ConnectAsync(string playerName) {
+            return base.Channel.ConnectAsync(playerName);
         }
         
-        public void ExitGame(int playerId) {
-            base.Channel.ExitGame(playerId);
+        public BlackJackClient.ServiceReference1.Card GiveCard(int playerId) {
+            return base.Channel.GiveCard(playerId);
         }
         
-        public System.Threading.Tasks.Task ExitGameAsync(int playerId) {
-            return base.Channel.ExitGameAsync(playerId);
-        }
-        
-        public void Ready(int playerId) {
-            base.Channel.Ready(playerId);
-        }
-        
-        public System.Threading.Tasks.Task ReadyAsync(int playerId) {
-            return base.Channel.ReadyAsync(playerId);
+        public System.Threading.Tasks.Task<BlackJackClient.ServiceReference1.Card> GiveCardAsync(int playerId) {
+            return base.Channel.GiveCardAsync(playerId);
         }
         
         public void Pass(int playerId) {
@@ -209,12 +136,20 @@ namespace BlackJackClient.ServiceReference1 {
             return base.Channel.PassAsync(playerId);
         }
         
-        public BlackJackClient.ServiceReference1.Card GiveCard(int playerId) {
-            return base.Channel.GiveCard(playerId);
+        public void Ready(int playerId) {
+            base.Channel.Ready(playerId);
         }
         
-        public System.Threading.Tasks.Task<BlackJackClient.ServiceReference1.Card> GiveCardAsync(int playerId) {
-            return base.Channel.GiveCardAsync(playerId);
+        public System.Threading.Tasks.Task ReadyAsync(int playerId) {
+            return base.Channel.ReadyAsync(playerId);
+        }
+        
+        public void Exit(int playerId) {
+            base.Channel.Exit(playerId);
+        }
+        
+        public System.Threading.Tasks.Task ExitAsync(int playerId) {
+            return base.Channel.ExitAsync(playerId);
         }
     }
 }
