@@ -24,11 +24,11 @@ namespace BlackJackClient
         public MainWindow()
         {
             InitializeComponent();
+        }
 
-            GameClient proxy = new GameClient();
-
-            int id = proxy.Connect("MyName", 0);
-            MessageBox.Show(id.ToString());
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlackJackClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="600" Width="900">
+    <Grid x:Name="MainGrid" Background="DarkGreen">
+        <Image x:Name="Table" Source="Resources/field.png" VerticalAlignment="Center" HorizontalAlignment="Left"></Image>
+        <DockPanel VerticalAlignment="Top">
+            <Button x:Name="btReady" HorizontalAlignment="Left" Margin="5">Ready!</Button>
+            <Button x:Name="btExit" HorizontalAlignment="Left" Margin="5">Exit</Button>
+        </DockPanel>
+        <DockPanel VerticalAlignment="Bottom">
+            <Button x:Name="btOneMore" HorizontalAlignment="Left" Margin="5">OneMore</Button>
+            <Button x:Name="btPass" HorizontalAlignment="Left" Margin="5">Pass</Button>
+            <Label HorizontalAlignment="Left" Margin="5">Score:</Label>
+            <Label x:Name="lbScore" HorizontalAlignment="Left" Margin="5">0</Label>
+        </DockPanel>
+
     </Grid>
 </Window>

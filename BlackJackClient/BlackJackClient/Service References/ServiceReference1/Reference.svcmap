@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="60a972f1-a5bb-4d34-85f7-fa709d14d87c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c9a3c5ea-1245-4c76-9976-5cdadf93fc8c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/BlackJackServiceWCF/Game/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Game.wsdl" MetadataType="Wsdl" ID="f0052d75-5c15-46e6-92b2-3158a5802dec" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackServiceWCF/Game/?wsdl" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="50697618-0f4e-4c30-8857-1714cd32268c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackServiceWCF/Game/?xsd=xsd0" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="32b50daf-60db-4349-8c21-9f778d7c1d47" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackServiceWCF/Game/?xsd=xsd1" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="3d7e3961-9225-439f-98f5-f1ce4f1c788f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackServiceWCF/Game/?disco" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="63e383dc-3c7a-4969-8438-7a76ec7ebde0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="b2fc592d-46cd-48d7-b39a-ffe3d011da36" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="7dee25b6-e1ef-4efb-8621-1182bc97892c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/?xsd=xsd0" />
+    <MetadataFile FileName="MyGame.wsdl" MetadataType="Wsdl" ID="8f77a9b4-97e0-4253-b160-3688cba0cc6a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="4a74b4e0-6220-4bd7-ac98-658a4bc64074" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BlackJackService/MyGame/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
