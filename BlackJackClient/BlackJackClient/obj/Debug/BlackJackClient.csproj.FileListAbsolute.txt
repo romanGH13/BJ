@@ -1,0 +1,14 @@
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\bin\Debug\BlackJackClient.exe.config
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\bin\Debug\BlackJackClient.exe
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\bin\Debug\BlackJackClient.pdb
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\MainWindow.g.cs
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\App.g.cs
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient_MarkupCompile.cache
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient_MarkupCompile.lref
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\MainWindow.baml
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient.g.resources
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient.Properties.Resources.resources
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient.exe
+c:\users\user\documents\visual studio 2015\Projects\BlackJackClient\BlackJackClient\obj\Debug\BlackJackClient.pdb

@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2015\Projects\BlackJackServiceWCF\BlackJackServiceWCF\bin\Debug\BlackJackServiceWCF.dll.config
+c:\users\user\documents\visual studio 2015\Projects\BlackJackServiceWCF\BlackJackServiceWCF\bin\Debug\BlackJackServiceWCF.dll
+c:\users\user\documents\visual studio 2015\Projects\BlackJackServiceWCF\BlackJackServiceWCF\bin\Debug\BlackJackServiceWCF.pdb
+c:\users\user\documents\visual studio 2015\Projects\BlackJackServiceWCF\BlackJackServiceWCF\obj\Debug\BlackJackServiceWCF.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\BlackJackServiceWCF\BlackJackServiceWCF\obj\Debug\BlackJackServiceWCF.dll
+c:\users\user\documents\visual studio 2015\Projects\BlackJackServiceWCF\BlackJackServiceWCF\obj\Debug\BlackJackServiceWCF.pdb
